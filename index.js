@@ -14,6 +14,10 @@ app.use(cors({
 }));
 // using routes
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Image Description API");
+});
+
 app.use("/api/imagedescription", imageDescriptonRoutes);
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
